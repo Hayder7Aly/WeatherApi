@@ -8,7 +8,7 @@ const forCast = ({lat, lng, location},callback) => {
       } else if (response.body.error) {
         callback("Unable to find location ..");
       } else {
-        const description = `It is currently : ${response.body.current.temp} . DegreeOut => ${response.body.current.weather[0].main}`
+        const description = `It is currently  : ${response.body.current.temp} . DegreeOut => ${response.body.current.weather[0].main}`
         callback(undefined, {location,description})
       }
     });
